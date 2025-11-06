@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Royal College Of Engineering</title>
+<title>Royal College of Engineering</title>
 
 <!-- ======== GOOGLE FONTS ======== -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -148,7 +148,7 @@ nav ul li:hover .dropdown{
 <!-- ========= NAVBAR ========== -->
 <nav>
     <div class="logo">
-        <a href="">RCE</a></div>
+        <a href="http://127.0.0.1:8000/admin/login/?next=/admin/">RCE</div>
 
     <ul>
         <li><a href="#">Home</a></li>
@@ -160,33 +160,33 @@ nav ul li:hover .dropdown{
                 <a href="#">Mission & Vision</a>
             </div>
         </li>
-        <li><a href="#">Students Life</a></li>
+        <li><a href="http://127.0.0.1:8000/campus/#extracurricular">Campus Life</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Events</a></li>
-        <li><a href="#">Alumni</a></li>
+        <!-- <li><a href="#">Alumni</a></li> -->
         <ul>
         <li>
             <a href="#">More Pages ▼</a>
             <div class="dropdown">
-                <a href="#">News Details</a>
-                <a href="#">Event Details</a>
-                <a href="#">Privacy Policy</a>
+                <a href="http://127.0.0.1:8000/courses/">Courses</a>
+                <a href="http://127.0.0.1:8000/admission/">Admissions</a>
+                <!-- <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
                 <a href="#">Error 404</a>
-                <a href="#">Starter Page</a>
+                <a href="#">Starter Page</a> -->
             </div>
         </li>
         </ul>
 
         <li>
-            <a href="#">Dropdown ▼</a>
+            <a href="#">Logins ▼</a>
             <div class="dropdown">
-                <a href="#">Page 1</a>
-                <a href="#">Page 2</a>
+                <a href="http://127.0.0.1:8000/stddash/">Student Login</a>
+                <a href="http://127.0.0.1:8000/fac_login/">Faculty Login</a>
             </div>
         </li>
 
-        <li><a href="#">Contact</a></li>
+        <li><a href="http://127.0.0.1:8000/admission/">Contact</a></li>
     </ul>
 </nav>
 
@@ -195,16 +195,92 @@ nav ul li:hover .dropdown{
     <div class="hero-content">
         <h1>Empowering Futures<br>Through Education</h1>
         <p>
-            Royal College of Engineering is a modern institution focused on innovation and practical learning. With advanced facilities and expert faculty, it prepares students to become skilled, industry-ready engineers and leaders.
+           Royal College of Engineering is a modern institution focused on innovation and practical learning. With advanced facilities and expert faculty, 
+           it prepares students to become skilled, industry-ready engineers and leaders.
 
         </p>
 
         <div class="btn-box">
-            <a href="http://127.0.0.1:8000/courses/" class="btn btn-primary">Start Your Journey</a>
+            <a href="#" class="btn btn-primary">Start Your Journey</a>
             <a href="#" class="btn btn-outline">Discover Programs</a>
         </div>
     </div>
-</section>
 
+    <style>.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.nav-item {
+    background: transparent;
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0596FF, #5CCAFF);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.icon-circle i {
+    font-size: 32px;
+    color: white;
+}
+
+.nav-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.nav-item h3 {
+    color: #222;
+    margin-bottom: 8px;
+}
+</style>
+    <div class="nav-grid">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+        <a href="http://127.0.0.1:8000/campus/#extracurricular" class="nav-item text-decoration-none">
+        <div class="icon-circle">
+            <i class="fas fa-university"></i>
+        </div>
+        <h3>Campus Life</h3>
+        <p style="color:white;">Experience innovation daily</p>
+    </a>
+
+    <a href="http://127.0.0.1:8000/courses/" class="nav-item text-decoration-none">
+        <div class="icon-circle">
+            <i class="fas fa-book"></i>
+        </div>
+        <h3>Courses</h3>
+        <p style="color:white;">Explore our wide range of programs</p>
+    </a>
+
+    <a href="http://127.0.0.1:8000/admission/" class="nav-item text-decoration-none">
+        <div class="icon-circle">
+            <i class="fas fa-edit"></i>
+        </div>
+        <h3>Admission</h3>
+        <p style="color:white;">Join our community of innovators</p>
+    </a>
+
+    <a href="http://127.0.0.1:8000/home-library/" class="nav-item text-decoration-none">
+        <div class="icon-circle">
+            <i class="fas fa-book-reader"></i>
+        </div>
+        <h3>Library</h3>
+        <p style="color:white;">Access knowledge and resources</p>
+    </a>
+</div>
+</section>
 </body>
 </html>
