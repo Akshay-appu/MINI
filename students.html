@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Royal College of Engineering</title>
+
+<!-- ======== GOOGLE FONTS ======== -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins', sans-serif;}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 80px;
+    z-index:1000;
+    background:rgba(0,0,0,0.15);
+    backdrop-filter: blur(4px);
+}
+
+nav .logo{
+    font-size:26px;
+    font-weight:600;
+    color:#00a36c;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#00a36c;
+}
+
+/* DROPDOWN MENU */
+.dropdown{
+    display:none;
+    position:absolute;
+    background:white;
+    top:30px;
+    width:190px;
+    border-radius:8px;
+    padding:10px 0;
+}
+
+.dropdown a{
+    color:#444 !important;
+    padding:12px;
+    display:block;
+}
+
+.dropdown a:hover{
+    background:#f5f5f5;
+}
+
+nav ul li:hover .dropdown{
+    display:block;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("smile.gif") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+    color:white;
+}
+
+/* HERO CONTENT */
+.hero-content{
+    width:45%;
+}
+
+.hero-content h1{
+    font-size:55px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    font-size:16px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+/* BUTTONS */
+.btn-box {
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#1d7fe6;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#1d7fe6;
+}
+
+.btn-outline{
+    background:rgba(255,255,255,0.15);
+    color:white;
+    border:1px solid white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+<body>
+
+<!-- ========= NAVBAR ========== -->
+<nav>
+    <div class="logo">
+        <a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><h2 style="color:white;">RCE</h2></div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="about.html">About </a>
+            <!-- <div class="dropdown">
+                <a href="#">History</a>
+                <a href="#">Leadership</a>
+                <a href="#">Mission & Vision</a>
+            </div> -->
+        </li>
+        <li><a href="http://127.0.0.1:8000/campus/#extracurricular">Campus Life</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Events</a></li>
+        <!-- <li><a href="#">Alumni</a></li> -->
+        <ul>
+        <li>
+            <a href="#">More Pages ▼</a>
+            <div class="dropdown">
+                <a href="http://127.0.0.1:8000/courses/">Courses</a>
+                <a href="http://127.0.0.1:8000/admission/">Admissions</a>
+                <!-- <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Error 404</a>
+                <a href="#">Starter Page</a> -->
+            </div>
+        </li>
+        </ul>
+
+        <li>
+            <a href="#">Logins ▼</a>
+            <div class="dropdown">
+                <a href="http://127.0.0.1:8000/stddash/">Student Login</a>
+                <a href="http://127.0.0.1:8000/fac_login/">Faculty Login</a>
+            </div>
+        </li>
+
+        <li><a href="http://127.0.0.1:8000/admission/">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ========= HERO SECTION ========== -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Students Life</h1>
+        <!-- <p>
+           Royal College of Engineering is a modern institution focused on innovation and practical learning. With advanced facilities and expert faculty, 
+           it prepares students to become skilled, industry-ready engineers and leaders.
+
+        </p> -->
+
+        <div class="btn-box">
+            <a href="http://127.0.0.1:8000/stddash/" class="btn btn-primary">Student Login</a>
+            <a href="http://127.0.0.1:8000/fac_login/" class="btn btn-outline">Faculty Login</a>
+        </div>
+    </div>
+
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+<style>
+    .student-section {
+        width: 100%;
+        padding: 60px 0;
+        background: transparent;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .student-section h2 {
+        font-size: 36px;
+        color: #013b4f;
+        margin-bottom: 10px;
+    }
+    .student-section p {
+        color: #6c757d;
+        margin-bottom: 50px;
+    }
+    .student-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 0 50px;
+        flex-wrap: wrap;
+    }
+    .student-img img {
+        width: 500px;
+        border-radius: 10px;
+    }
+    .student-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .card {
+       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        padding: 25px;
+        border-radius: 14px;
+        text-align: left;
+        width: 260px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .card i {
+        font-size: 30px;
+        color: #1d7fe6;
+        margin-bottom: 15px;
+    }
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #1d7fe6;
+    }
+    .view-btn {
+        margin-top: 30px;
+        padding: 12px 22px;
+        background: #1d7fe6;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
+<section class="student-section">
+    <!-- <h2>Students Life</h2>
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+
+    <div class="student-container">
+
+        <!-- Left Image -->
+        <!-- <div class="student-img">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="Students on campus">
+        </div> -->
+
+        <!-- Right Cards -->
+        <div>
+            <div class="student-cards">
+
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h3 style="color:white;">Student Clubs</h3>
+                    <p style="color:white;">Connect with peers, develop skills, and explore diverse interests outside the classroom.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-trophy"></i>
+                    <h3 style="color:white;">Sports Events</h3>
+                    <p style="color:white;">Compete, cheer, and celebrate teamwork across a variety of thrilling intercollegiate sports.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-music"></i>
+                    <h3 style="color:white;">Arts & Culture</h3>
+                    <p style="color:white;">Express your creativity through performances, workshops, and exhibitions. Discover the arts!</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-globe"></i>
+                    <h3 style="color:white;">Global Experiences</h3>
+                    <p style="color:white;">Travel, study abroad, and immerse yourself in new cultures for a truly global perspective.</p>
+                </div>
+            </div>
+
+            <button class="view-btn"><a href="#"></a>View All Student Activities</button>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
