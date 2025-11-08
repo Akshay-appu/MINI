@@ -5,6 +5,193 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Royal College of Engineering</title>
 
+<!-- ======== GOOGLE FONTS ======== -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins', sans-serif;}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 80px;
+    z-index:1000;
+    background:rgba(0,0,0,0.15);
+    backdrop-filter: blur(4px);
+}
+
+nav .logo{
+    font-size:26px;
+    font-weight:600;
+    color:#00a36c;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#00a36c;
+}
+
+/* DROPDOWN MENU */
+.dropdown{
+    display:none;
+    position:absolute;
+    background:white;
+    top:30px;
+    width:190px;
+    border-radius:8px;
+    padding:10px 0;
+}
+
+.dropdown a{
+    color:#444 !important;
+    padding:12px;
+    display:block;
+}
+
+.dropdown a:hover{
+    background:#f5f5f5;
+}
+
+nav ul li:hover .dropdown{
+    display:block;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("output-onlinegiftools (2).gif") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+    color:white;
+}
+
+/* HERO CONTENT */
+.hero-content{
+    width:45%;
+}
+
+.hero-content h1{
+    font-size:55px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    font-size:16px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+/* BUTTONS */
+.btn-box {
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#1d7fe6;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#1d7fe6;
+}
+
+.btn-outline{
+    background:rgba(255,255,255,0.15);
+    color:white;
+    border:1px solid white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:black;
+}
+</style>
+</head>
+<body>
+
+<!-- ========= NAVBAR ========== -->
+<nav>
+    <div class="logo">
+        <a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><h2 style="color:white;">RCE</h2></div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+            <a href="about.html">About </a>
+            <li>
+                <a href="library.html">Library </a></li>
+            <!-- <div class="dropdown">
+                <a href="#">History</a>
+                <a href="#">Leadership</a>
+                <a href="#">Mission & Vision</a>
+            </div> -->
+        </li>
+        <li><a href="campus.html">Campus</a></li>
+        <li><a href="students.html">Student Life</a></li>
+        <!-- <li><a href="#">Events</a></li> -->
+        <!-- <li><a href="#">Alumni</a></li> -->
+        <ul>
+        <li>
+            <a href="#">Courses & Admissions ▼</a>
+            <div class="dropdown">
+                <a href="http://127.0.0.1:8000/courses/">Courses</a>
+                <a href="http://127.0.0.1:8000/admission/">Admissions</a>
+                <!-- <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Error 404</a>
+                <a href="#">Starter Page</a> -->
+            </div>
+        </li>
+        </ul>
+
+        <li>
+            <a href="#">Logins ▼</a>
+            <div class="dropdown">
+                <a href="http://127.0.0.1:8000/stddash/">Student Login</a>
+                <a href="http://127.0.0.1:8000/fac_login/">Faculty Login</a>
+            </div>
+        </li>
+
+        <li><a href="http://127.0.0.1:8000/admission/">Contact</a></li>
+    </ul>
+</nav>
+
 <!-- ✅ Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -93,6 +280,7 @@ body {
 </style>
 </head>
 
+
 <body>
 
 <section class="testimonial-section">
@@ -104,7 +292,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/akshay1.jpg" alt="profile" height="150" width="150">
+          <img src="student/akshay1.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -117,7 +305,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/bbb.jpg" alt="profile" height="150" width="150">
+          <img src="student/bbb.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -130,7 +318,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/dev 1.jpg" alt="profile" height="150" width="150">
+          <img src="student/dev 1.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -143,7 +331,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/kiran.jpg" alt="profile" height="150" width="150">
+          <img src="student/kiran.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -156,7 +344,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/kripal 2.jpg" alt="profile" height="150" width="150">
+          <img src="student/kripal 2.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -169,7 +357,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/kreethan.jpg" alt="profile" height="150" width="150">
+          <img src="student/kreethan.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -182,7 +370,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/pani11.png" alt="profile" height="150" width="150">
+          <img src="student/pani11.png" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -195,7 +383,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/mirza.jpg" alt="profile" height="150" width="150">
+          <img src="student/mirza.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -208,7 +396,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/febin.jpg" alt="profile" height="150" width="150">
+          <img src="student/febin.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -221,7 +409,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/tatas.jpg" alt="profile" height="150" width="150">
+          <img src="student/tatas.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -234,7 +422,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/hemanth.jpg" alt="profile" height="150" width="150">
+          <img src="student/hemanth.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -247,7 +435,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/gowtham.jpg" alt="profile" height="150" width="150">
+          <img src="student/gowtham.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -260,7 +448,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/chandhan.jpg" alt="profile" height="150" width="150">
+          <img src="student/chandhan.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -273,7 +461,7 @@ body {
       <!-- ⭐ Slide 2 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/charanml.jpg" alt="profile" height="150" width="150">
+          <img src="student/charanml.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div>
@@ -286,7 +474,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/ganesh.jpg" alt="profile" height="150" width="150">
+          <img src="student/ganesh.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -299,7 +487,7 @@ body {
       <!-- ⭐ Slide 1 -->
       <div class="swiper-slide">
         <div class="testimonial-content">
-          <img src="student/karthik.jpg" alt="profile" height="150" width="150">
+          <img src="student/karthik.jpg" alt="profile">
           <h2> </h2>
           <div class="role"> </div>
           <div class="stars">★★★★★</div> 
@@ -337,6 +525,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 </script>
-
+</section>
 </body>
 </html>
