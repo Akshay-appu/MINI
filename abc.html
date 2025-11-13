@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("admin.gif") center/cover no-repeat;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #1e293b;
+      color: #fff;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #cbd5e1;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #334155;
+      color: #fff;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .header {
+      background: #1e293b;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #1e293b;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="http://127.0.0.1:8000/home-library/">🏠 Home Library</a>
+    <a href="http://127.0.0.1:8000/library/">📚 Library</a>
+    <a href="http://127.0.0.1:8000/add-library-book/">➕ Add Library Book</a>
+    <a href="http://127.0.0.1:8000/add-student/">👨‍🎓 Add Student</a>
+    <a href="http://127.0.0.1:8000/student-options/">🧾 Student Options</a>
+    <a href="http://127.0.0.1:8000/custom-admin/students/">🧑‍💼 Manage Students</a>
+    <a href="http://127.0.0.1:8000/academic-details/">🎓 Academic Details</a>
+    <a href="http://127.0.0.1:8000/add-academic-details/">📝 Add Academic Details</a>
+    <a href="http://127.0.0.1:8000/add-course-planning/">📘 Course Planning</a>
+    <a href="http://127.0.0.1:8000/faculty/manage-student-attendance/">📅 Attendance</a>
+    <a href="http://127.0.0.1:8000/applications/">📥 Applications</a>
+  </div>
+
+  <div class="main-content">
+    <div class="header"><h2><b>Welcome to Admin Dashboard</b></h2></div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Library Management</h3>
+        <a href="http://127.0.0.1:8000/library/">Open Library</a><br>
+        <a href="http://127.0.0.1:8000/add-library-book/">Add New Book</a>
+      </div>
+
+      <div class="card">
+        <h3>Student Management</h3>
+        <a href="http://127.0.0.1:8000/add-student/">Add Student</a><br>
+        <a href="http://127.0.0.1:8000/student-options/">Student Options</a><br>
+        <a href="http://127.0.0.1:8000/custom-admin/students/">Manage Students</a>
+      </div>
+
+      <div class="card">
+        <h3>Academic Records</h3>
+        <a href="http://127.0.0.1:8000/academic-details/">View Academic Details</a><br>
+        <a href="http://127.0.0.1:8000/add-academic-details/">Add Academic Info</a><br>
+        <a href="http://127.0.0.1:8000/add-course-planning/">Course Planning</a>
+      </div>
+
+      <div class="card">
+        <h3>Attendance Management</h3>
+        <a href="http://127.0.0.1:8000/faculty/manage-student-attendance/">Manage Attendance</a>
+      </div>
+
+      <div class="card">
+        <h3>Applications</h3>
+        <a href="http://127.0.0.1:8000/applications/">View Applications</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
